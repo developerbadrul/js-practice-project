@@ -135,8 +135,7 @@ function selectAnswer(event) {
         if (btn.dataset.correct === "true") {
             btn.classList.add("bg-[#e6fff0]", "border-[#a3f0c4]", "text-[#28a745]")
         } else if (btn === selectedButton) {
-            btn.classList.remove("bg-[#f8f0e5]", "border-[#eadbc8]");
-            btn.classList.add("bg-[#fff0f0]", "border-[#ffbdbd]", "text-[#dc3545]")
+            btn.classList.add("bg-[#fff0f0]", "border-[#ffbdbd]", "text-[#dc3545]");
         }
         btn.classList.remove("hover:bg-[#eadbc8]", "hover:border-[#dac0ae]", "cursor-pointer");
     })
