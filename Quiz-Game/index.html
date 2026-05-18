@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Game</title>
-
-    <!-- Tailwind CSS v4 browser version -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="flex min-h-screen items-center justify-center bg-[#f5efe6] p-4 font-sans">
     <div
       class="relative w-full max-w-[600px] overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
     >
-      <!-- Start Screen -->
+      <!-- Start Screen (visible by default) -->
       <div id="start-screen" class="screen block p-8 text-center max-[500px]:p-4">
         <h1 class="mb-5 text-[2.5rem] font-bold text-[#e86a33] max-[500px]:text-[2rem]">
           Quiz Time!
@@ -28,64 +26,13 @@
         </button>
       </div>
 
-      <!-- Quiz Screen -->
-      <div id="quiz-screen" class="screen hidden p-8 text-center max-[500px]:p-4">
-        <div class="mb-4">
-          <h2
-            id="question-text"
-            class="mb-4 text-[1.5rem] leading-[1.4] font-bold text-[#333] max-[500px]:text-[1.3rem]"
-          >
-            Question goes here
-          </h2>
+      <!-- Quiz Screen (rendered by JS) -->
+      <div id="quiz-screen" class="screen hidden p-8 text-center max-[500px]:p-4"></div>
 
-          <div class="mb-[10px] flex justify-between text-[#666]">
-            <p>
-              Question <span id="current-question">1</span> of
-              <span id="total-questions">5</span>
-            </p>
-
-            <p>Score: <span id="score">0</span></p>
-          </div>
-        </div>
-
-        <div id="answers-container" class="mb-[25px] flex flex-col gap-[10px]">
-          <!-- Answer buttons will be inserted here from JS -->
-        </div>
-
-        <div class="mt-5 h-[10px] overflow-hidden rounded-[5px] bg-[#f8f0e5]">
-          <div
-            id="progress"
-            class="h-full w-[0%] bg-[#e86a33] transition-[width] duration-300 ease-in-out"
-          ></div>
-        </div>
-      </div>
-
-      <!-- Result Screen -->
-      <div id="result-screen" class="screen hidden p-8 text-center max-[500px]:p-4">
-        <h1 class="mb-[30px] text-[2rem] font-bold text-[#e86a33]">
-          Quiz Results
-        </h1>
-
-        <div class="mb-[30px] rounded-[10px] bg-[#f8f0e5] p-5">
-          <p class="mb-4 text-[1.2rem] text-[#333]">
-            You scored <span id="final-score">0</span> out of
-            <span id="max-score">5</span>
-          </p>
-
-          <div id="result-message" class="text-[1.5rem] font-semibold text-[#e86a33]">
-            Good job!
-          </div>
-        </div>
-
-        <button
-          id="restart-btn"
-          class="cursor-pointer rounded-[10px] bg-[#e86a33] px-[30px] py-[15px] text-[1.1rem] text-white transition-colors duration-300 hover:bg-[#d45b28] max-[500px]:px-[25px] max-[500px]:py-3 max-[500px]:text-[1rem]"
-        >
-          Restart Quiz
-        </button>
-      </div>
+      <!-- Result Screen (rendered by JS) -->
+      <div id="result-screen" class="screen hidden p-8 text-center max-[500px]:p-4"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
