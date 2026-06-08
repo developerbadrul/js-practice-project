@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Game</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body class="flex min-h-screen items-center justify-center bg-[#f5efe6] p-4 font-sans">
-    <div
-      class="relative w-full max-w-[600px] overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_rgba(0,0,0,0.1)]"
-    >
-      <!-- Start Screen (visible by default) -->
-      <div id="start-screen" class="screen block p-8 text-center max-[500px]:p-4">
-        <h1 class="mb-5 text-[2.5rem] font-bold text-[#e86a33] max-[500px]:text-[2rem]">
-          Quiz Time!
-        </h1>
-        <p class="mb-[30px] text-[1.1rem] text-[#666]">
-          Test your knowledge with these fun questions
-        </p>
-        <button
-          id="start-btn"
-          class="cursor-pointer rounded-[10px] bg-[#e86a33] px-[30px] py-[15px] text-[1.1rem] text-white transition-colors duration-300 hover:bg-[#d45b28] max-[500px]:px-[25px] max-[500px]:py-3 max-[500px]:text-[1rem]"
-        >
-          Start Quiz
-        </button>
-      </div>
 
-      <!-- Quiz Screen (rendered by JS) -->
-      <div id="quiz-screen" class="screen hidden p-8 text-center max-[500px]:p-4"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Game</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
 
-      <!-- Result Screen (rendered by JS) -->
-      <div id="result-screen" class="screen hidden p-8 text-center max-[500px]:p-4"></div>
+<body class="flex min-h-screen items-center justify-center bg-[#f5efe6] p-4 font-sans">
+  <div class="relative w-full max-w-[600px] overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
+    <!-- Start Screen (visible by default) -->
+    <div id="start-screen" class="screen block p-8 text-center max-[500px]:p-4">
+      <h1 class="mb-5 text-[2.5rem] font-bold text-[#e86a33] max-[500px]:text-[2rem]">
+        Quiz Time!
+      </h1>
+      <p class="mb-[30px] text-[1.1rem] text-[#666]">
+        Test your knowledge with these fun questions
+      </p>
+      <button id="start-btn"
+        class="cursor-pointer rounded-[10px] bg-[#e86a33] px-[30px] py-[15px] text-[1.1rem] text-white transition-colors duration-300 hover:bg-[#d45b28] max-[500px]:px-[25px] max-[500px]:py-3 max-[500px]:text-[1rem]">
+        Start Quiz
+      </button>
     </div>
 
-    <script type="module" src="js/app.js"></script>
-  </body>
+    <!-- Quiz Screen (rendered by JS) -->
+    <div id="quiz-screen" class="screen hidden p-8 text-center max-[500px]:p-4"></div>
+
+    <!-- Result Screen (rendered by JS) -->
+    <div id="result-screen" class="screen hidden p-8 text-center max-[500px]:p-4"></div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+
 </html>
